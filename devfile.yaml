@@ -1,0 +1,12 @@
+schemaVersion: 2.2.2
+metadata:
+  name: ansible-devspaces
+components:
+  - name: tooling-container
+    container:
+      image: registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9:latest
+      memoryLimit: 6Gi
+      cpuLimit: 2000m
+      env:
+        - name: "ANSIBLE_COLLECTIONS_PATH"
+          value: "~/.ansible/collections:/usr/share/ansible/collections"
