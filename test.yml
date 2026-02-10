@@ -31,4 +31,3 @@
         src: web_content/
         dest: /var/www/html
         mode: u=rw,g=r,o=r
-...
