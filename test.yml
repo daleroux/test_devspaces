@@ -26,6 +26,13 @@
         - httpd
         - mariadb
 
+    - name: Ensure firewall allows HTTP traffic
+      ansible.posix.firewalld:
+        service: http
+        permanent: true
+        immediate: true
+        state: enabled
+
     - name: Ensure the web content is installed
       ansible.builtin.template:
         src: templates/index.html.j2
