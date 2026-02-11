@@ -27,7 +27,7 @@
         - mariadb
 
     - name: Ensure the web content is installed
-      ansible.builtin.copy:
-        src: web_content/
-        dest: /var/www/html
+      ansible.builtin.template:
+        src: templates/index.html.j2
+        dest: /var/www/html/index.html
         mode: u=rw,g=r,o=r
