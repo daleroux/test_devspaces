@@ -10,6 +10,9 @@ components:
       env:
         - name: "ANSIBLE_COLLECTIONS_PATH"
           value: "~/.ansible/collections:/usr/share/ansible/collections"
+      volumeMounts:
+        - name: home-storage
+          path: /home/user
   - name: home-storage
     volume:
       size: 5Gi
