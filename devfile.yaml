@@ -4,7 +4,8 @@ metadata:
 components:
   - name: tooling-container
     container:
-      image: registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9:latest
+      image: quay.io/jpullen0/ansible-devspaces-nested-podman:latest
+      # registry.redhat.io/ansible-automation-platform-tech-preview/ansible-devspaces-rhel9:latest
       memoryLimit: 6Gi
       cpuLimit: 2000m
       env:
